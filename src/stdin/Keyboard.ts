@@ -183,7 +183,17 @@ export default class Keyboard {
 		// Ctrl + lowercase letter.  Unfortunately, I don't believe there is any way
 		// within Nodejs to recognize other combinations of special keys.
 		const charCode = char.charCodeAt(0);
-		if (charCode >= 1 && charCode <= 26) {
+
+		/// on Windows, Backspace is 8 (or so it seems)
+		if (charCode == 8) {
+			// Backspace
+			this.setSpecialKeys({
+				...map,
+				backspace: true
+			});
+			this.clearChars();
+
+		} else if (charCode >= 1 && charCode <= 26) {
 			const letter = String.fromCharCode(charCode + 96);
 			this.state.ctrlKeys = letter;
 			this.state.chars = "";
