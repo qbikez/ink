@@ -1,0 +1,1 @@
+{"version":3,"file":"toArray.js","sourceRoot":"","sources":["../../src/utility/toArray.ts"],"names":[],"mappings":"AAAA,MAAM,UAAU,OAAO,CAAU,GAAM;IACtC,IAAI,KAAK,CAAC,OAAO,CAAC,GAAG,CAAC,EAAE,CAAC;QACxB,OAAO,GAAG,CAAC;IACZ,CAAC;SAAM,CAAC;QACP,OAAO,CAAC,GAAG,CAAC,CAAC;IACd,CAAC;AACF,CAAC"}

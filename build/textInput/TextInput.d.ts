@@ -1,0 +1,21 @@
+import React from "react";
+import { Return as UseTextInputReturn } from "./useTextInput.js";
+import { BoxProps, TextProps, KeyInput } from "../index.js";
+import { Except } from "type-fest";
+type Color = Exclude<BoxProps["borderColor"], "inherit">;
+type Props = {
+    onChange: UseTextInputReturn["onChange"];
+    inputStyle?: "line" | "area";
+    onExit?: (value: string, stdin: string) => unknown;
+    onEnter?: (value: string, stdin: string) => unknown;
+    onDownArrow?: () => unknown;
+    onUpArrow?: () => unknown;
+    onKeypress?: (char: string) => unknown;
+    enterKeymap?: KeyInput;
+    exitKeymap?: KeyInput;
+    cursorColor?: Color;
+    textStyle?: Except<TextProps, "children" | "wrap">;
+    autoEnter?: boolean;
+};
+export declare function TextInput({ onChange, onEnter, onExit, onKeypress, onUpArrow, onDownArrow, enterKeymap, exitKeymap, cursorColor, textStyle, autoEnter, inputStyle, }: Props): React.ReactNode;
+export {};
