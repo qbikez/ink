@@ -3,6 +3,7 @@ import process from "node:process";
 import type { ReactNode } from "react";
 import Ink, { type Options as InkOptions } from "./ink.js";
 import instances from "./instances.js";
+import ansiEscapes from "ansi-escapes";
 
 export type RenderOptions = {
 	/**
@@ -85,6 +86,12 @@ const render = (
 		debug: false,
 		exitOnCtrlC: true,
 		patchConsole: true,
+		ansiEscapeChars: {
+			// clearScreen: ansiEscapes.clearTerminal, // <-- this is the original default. Old frames are left in the scroll buffer, causing it to fill quickly
+			clearScreen: ansiEscapes.clearScreen, // <-- clear screen is nicer, but you will loose previous scroll buffer
+			//clearScreen: ansiEscapes.eraseScreen // <-- similar to clearTerminal?
+			// clearScreen: ansiEscapes.cursorTo(0, 0), // <--  this might leave some artifacts in the scroll buffer, as well as on the screen, if it's not fully filled
+		},
 		...getOptions(options),
 	};
 
