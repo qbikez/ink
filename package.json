@@ -20,7 +20,7 @@
 	"scripts": {
 		"dev": "tsc --watch",
 		"build": "tsc",
-		"prepare": "npm run build",
+		"//prepare": "npm run build",
 		"test": "tsc && TEST_ENV=true vitest",
 		"test:verbose": "tsc && TEST_ENV=true vitest --reporter=verbose",
 		"test:original": "tsc --noEmit && FORCE_COLOR=true TEST_ENV=true ava",
