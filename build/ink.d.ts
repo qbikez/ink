@@ -8,6 +8,9 @@ export type Options = {
     patchConsole: boolean;
     waitUntilExit?: () => Promise<void>;
     throttle?: number;
+    ansiEscapeChars: {
+        clearScreen: string;
+    };
 };
 export default class Ink {
     private readonly options;

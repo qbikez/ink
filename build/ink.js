@@ -1,7 +1,6 @@
 import process from "node:process";
 import React from "react";
 import { throttle } from "es-toolkit/compat";
-import ansiEscapes from "ansi-escapes";
 import isInCi from "is-in-ci";
 import autoBind from "auto-bind";
 import signalExit from "signal-exit";
@@ -144,7 +143,7 @@ export default class Ink {
             this.fullStaticOutput += staticOutput;
         }
         if (outputHeight >= this.options.stdout.rows) {
-            this.options.stdout.write(ansiEscapes.clearTerminal + this.fullStaticOutput + output);
+            this.options.stdout.write(this.options.ansiEscapeChars.clearScreen + this.fullStaticOutput + output);
             this.lastOutput = output;
             return;
         }
