@@ -1,4 +1,4 @@
-import Yoga from "yoga-wasm-web/auto";
+import Yoga from "yoga-layout";
 import measureText from "./measure-text.js";
 import wrapText from "./wrap-text.js";
 import squashTextNodes from "./squash-text-nodes.js";

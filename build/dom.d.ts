@@ -1,4 +1,4 @@
-import { type Node as YogaNode } from "yoga-wasm-web/auto";
+import { type Node as YogaNode } from "yoga-layout";
 import { type BaseProps } from "./baseProps.js";
 import { type OutputTransformer } from "./render-node-to-output.js";
 import { TextProps } from "./index.js";

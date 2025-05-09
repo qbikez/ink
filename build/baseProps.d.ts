@@ -1,5 +1,5 @@
 import { type Boxes, type BoxStyle } from "cli-boxes";
-import { type Node as YogaNode } from "yoga-wasm-web/auto";
+import { type Node as YogaNode } from "yoga-layout";
 import { Title } from "./renderTitles/renderTitleToOutput.js";
 import { Color } from "./utility/types.js";
 import { MouseEventHandler } from "./index.js";

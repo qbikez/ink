@@ -5,7 +5,7 @@ import isInCi from "is-in-ci";
 import autoBind from "auto-bind";
 import signalExit from "signal-exit";
 import patchConsole from "patch-console";
-import Yoga from "yoga-wasm-web/auto";
+import Yoga from "yoga-layout";
 import reconciler from "./reconciler.js";
 import render from "./renderer.js";
 import * as dom from "./dom.js";

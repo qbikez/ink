@@ -1,7 +1,7 @@
 import process from "node:process";
 import createReconciler from "react-reconciler";
 import { DefaultEventPriority } from "react-reconciler/constants.js";
-import Yoga from "yoga-wasm-web/auto";
+import Yoga from "yoga-layout";
 import { createTextNode, appendChildNode, insertBeforeNode, removeChildNode, setStyle, setTextNodeValue, createNode, setAttribute, } from "./dom.js";
 import applyBaseProps from "./baseProps.js";
 // We need to conditionally perform devtools connection to avoid

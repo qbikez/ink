@@ -1,4 +1,4 @@
-import { Node as YogaNode } from "yoga-wasm-web";
+import { Node as YogaNode } from "yoga-layout";
 import { CornerPositions } from "./ElementPosition.js";
 import { Title } from "../renderTitles/renderTitleToOutput.js";
 export type Events = "CLICK" | "DOUBLE_CLICK" | "MOUSE_DOWN" | "MOUSE_UP" | "RIGHT_CLICK" | "RIGHT_DOUBLE_CLICK" | "RIGHT_MOUSE_DOWN" | "RIGHT_MOUSE_UP" | "SCROLL_UP" | "SCROLL_DOWN" | "SCROLL_CLICK";

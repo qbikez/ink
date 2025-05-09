@@ -1,4 +1,4 @@
-import { Node as YogaNode } from "yoga-wasm-web";
+import { Node as YogaNode } from "yoga-layout";
 import EventEmitter = require("events");
 import ElementPosition, { CornerPositions } from "./ElementPosition.js";
 import { spawnSync } from "child_process";
